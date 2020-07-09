@@ -2,25 +2,21 @@
 
 namespace NumbersInCSharp
 {
-    class Program
+  class Program
+  {
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            int a = 18;
-            int b = 2;
-            int c = a + b;
-            Console.WriteLine(c);
-            c = a - b;
-            Console.WriteLine(c);
-            c = a * b;
-            Console.WriteLine(c);
-            c = a / b;
-            Console.WriteLine(c);
-            Console.WriteLine(c.GetType());
-            int d = (int)Math.Pow((double)a,(double)b);
-            Console.WriteLine(d);
-            // c = a ** b;
-            // Console.WriteLine(c);
-        }
+      int a = 7;
+      int b = 4;
+      int c = 3;
+      int d = (a + b) / c;
+      int e = (a + b) % c;
+      Console.WriteLine($"quotient: {d}");
+      Console.WriteLine($"remainder: {e}");
+      int max = int.MaxValue;
+      int min = int.MinValue;
+      Console.WriteLine($"The range of integers is {min} to {max}");
+      Console.WriteLine($"What happens if I add 1 to max: {max + 1}");
     }
+  }
 }
