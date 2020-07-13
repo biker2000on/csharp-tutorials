@@ -9,7 +9,7 @@ using webApp.Data;
 namespace webApp.Migrations
 {
     [DbContext(typeof(RazorPagesMovieContext))]
-    [Migration("20200712223051_InitialCreate")]
+    [Migration("20200713215614_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,6 +31,9 @@ namespace webApp.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("Rating")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Title")
